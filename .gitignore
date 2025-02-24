@@ -1,0 +1,7 @@
+figs/**/*.png
+figs/**/*.svg
+data/**/*.npy
+data/**/*.npz
+__pycache__
+.vscode
+
