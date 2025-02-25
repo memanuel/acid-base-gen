@@ -1,6 +1,5 @@
 import numpy as np
 import numpy.typing as npt
-from scipy.interpolate import pchip_interpolate
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -280,12 +279,14 @@ def main():
     else:
         print(f'Solver state not found in {path}. Proceeding to solve...')
         s.solve()
+        print('Saving solver state...')
         s.save(fname=fname)
 
     # Print summary of the final state
     s.summarize()
 
     # Plot the final state - outputs used in publication figures
+    print('Generating plots...')
     add_title: bool = True
     is_final: bool = True
     s.plot_frame(add_title=add_title, is_final=is_final)
