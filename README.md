@@ -14,11 +14,17 @@ See [Anaconda Installation Guide](https://conda.io/projects/conda/en/latest/user
 Then run these commands in a terminal if you are on a Windows platform:
 
     > cd \your\path\to\acid-base-gen
-    > conda env create -f src/abg.yml
+    > conda env create -f src/abg-win64.yml
     > conda activate abg
 
 This will create a new conda environment on your system named `abg` that includes all the packages required to run the Python programs.
-It has not been tested on a Linux or Mac platform. However, in principle it should be easy to adapt to these platforms if required.
+The steps on a Linux platform are similar:
+
+    $ cd /your/path/to/acid-base-gen
+    $ conda env create -f src/abg-linux.yml
+    $ conda activate abg
+
+It has not been tested on a Mac platform. However, in principle it should be easy to adapt to Mac if required.
 
 ## Replicate Generation of the published figures
 
